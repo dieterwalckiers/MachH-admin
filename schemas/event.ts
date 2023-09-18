@@ -23,7 +23,7 @@ export default {
         {
             name: "price",
             title: "Price",
-            type: "number",
+            type: "string",
         },
         {
             name: "title",
@@ -36,5 +36,22 @@ export default {
             title: "Description",
             type: "text",
         },
+        {
+            name: "linkedProjects",
+            title: "Linked Projects",
+            type: "array",
+            of: [{ type: "reference", to: [{ type: "project" }] }],
+        },
+        {
+            name: "slug",
+            title: "Slug",
+            type: "slug",
+            options: {
+                source: (doc: any, { parent }: any) => parent && parent.title,
+                maxLength: 96
+            },
+            validation: (Rule: any) => Rule.required(),
+            description: "Id to create a unique event-link (eg. /events/{slug}). You can generate this or manually fill this in.",
+        }
     ],
 };

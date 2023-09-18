@@ -35,7 +35,6 @@ export default {
             title: "Linked Projects",
             type: "array",
             of: [{ type: "reference", to: [{ type: "project" }] }],
-            description: "These will be rendered as a list of clickable tags at the bottom of the post"
         },
         {
             name: "ctaHref",
