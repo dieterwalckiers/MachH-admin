@@ -8,6 +8,7 @@ export default {
             name: "date",
             title: "Date",
             type: "date",
+            validation: (Rule: any) => Rule.required(),
         },
         {
             name: "time",
@@ -28,6 +29,7 @@ export default {
             name: "title",
             title: "Title",
             type: "string",
+            validation: (Rule: any) => Rule.required(),
         },
         {
             name: "description",
