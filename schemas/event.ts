@@ -37,6 +37,22 @@ export default {
             type: "text",
         },
         {
+            name: "image",
+            title: "Image",
+            type: "image",
+            description: "will be cropped to a square thumbnail on the events page"
+        },
+        {
+            name: "ctaHref",
+            title: "Call-to-action link",
+            type: "string",
+        },
+        {
+            name: "ctaText",
+            title: "Call-to-action text",
+            type: "string",
+        },
+        {
             name: "linkedProjects",
             title: "Linked Projects",
             type: "array",
