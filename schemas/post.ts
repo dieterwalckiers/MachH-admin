@@ -40,6 +40,7 @@ export default {
             name: "ctaHref",
             title: "Call-to-action link",
             type: "string",
+            description: "Start with http(s) to link to an external site"
         },
         orderRankField({ type: "post" }),
     ],

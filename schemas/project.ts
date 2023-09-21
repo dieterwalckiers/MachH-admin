@@ -39,7 +39,7 @@ export default {
                 maxLength: 96
             },
             validation: (Rule: any) => Rule.required(),
-            description: "Id to create a unique project-link (eg. /project/{slug}). You can generate this or manually fill this in.",
+            description: "Id to create a unique project-link (eg. mach-h.be/{slug}). You can generate this or manually fill this in.",
         },
         {
             name: "hexColor",

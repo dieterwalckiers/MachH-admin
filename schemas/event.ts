@@ -46,6 +46,7 @@ export default {
             name: "ctaHref",
             title: "Call-to-action link",
             type: "string",
+            description: "Start with http(s) to link to an external site",
         },
         {
             name: "ctaText",
@@ -67,7 +68,7 @@ export default {
                 maxLength: 96
             },
             validation: (Rule: any) => Rule.required(),
-            description: "Id to create a unique event-link (eg. /events/{slug}). You can generate this or manually fill this in.",
+            description: "Id to create a unique event-link (eg. mach-h.be/events/{slug}). You can generate this or manually fill this in.",
         }
     ],
 };
