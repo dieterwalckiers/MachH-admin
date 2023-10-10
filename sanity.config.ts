@@ -48,9 +48,21 @@ export default defineConfig({
           }),
           S.listItem()
             .title("Site Settings")
+            .id("siteSettings")
             .icon(createIcon("⚙️"))
             .child(
-              S.documentTypeList("siteSettings")
+              S.document()
+                .schemaType("siteSettings")
+                .documentId("siteSettings")
+            ),
+          S.listItem()
+            .title("About us page")
+            .id("about")
+            .icon(createIcon("⚙️"))
+            .child(
+              S.document()
+                .schemaType("about")
+                .documentId("about")
             ),
         ])
     },

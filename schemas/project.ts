@@ -25,6 +25,11 @@ export default {
             validation: (Rule: any) => Rule.required(),
         },
         {
+            name: "description",
+            title: "Description",
+            type: "text",
+        },
+        {
             name: "events",
             title: "Events",
             type: "array",

@@ -14,6 +14,7 @@ export default {
             name: "time",
             title: "Time",
             type: "string",
+            description: "hh:mm",
         },
         {
             name: "place",

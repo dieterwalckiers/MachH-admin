@@ -20,15 +20,27 @@ export default {
             default: Date.now,
             validation: (Rule: any) => Rule.required(),
         },
+        // {
+        //     name: "body",
+        //     title: "Body",
+        //     type: "array",
+        //     of: [
+        //         { type: "block" },
+        //         { type: "image" }, // note to self: so this is possible: array of both blocks and images... skipping it for now though for dev speed
+        //     ],
+        //     validation: (Rule: any) => Rule.required(),
+        // },
         {
             name: "body",
             title: "Body",
-            type: "array",
-            of: [
-                { type: "block" },
-                { type: "image" },
-            ],
+            type: "text",
             validation: (Rule: any) => Rule.required(),
+        },
+        {
+            name: "image",
+            title: "Image",
+            type: "image",
+            description: "will be cropped to a square thumbnail in a post (news page)"
         },
         {
             name: "linkedProjects",
@@ -41,6 +53,11 @@ export default {
             title: "Call-to-action link",
             type: "string",
             description: "Start with http(s) to link to an external site"
+        },
+        {
+            name: "ctaText",
+            title: "Call-to-action text",
+            type: "string",
         },
         orderRankField({ type: "post" }),
     ],
