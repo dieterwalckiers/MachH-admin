@@ -30,6 +30,12 @@ export default {
             type: "text",
         },
         {
+            name: "gallery",
+            title: "Gallery",
+            type: "array",
+            of: [{ type: "image" }],
+        },
+        {
             name: "events",
             title: "Events",
             type: "array",
