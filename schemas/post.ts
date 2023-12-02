@@ -40,7 +40,6 @@ export default {
             name: "image",
             title: "Image",
             type: "image",
-            description: "will be cropped to a square thumbnail in a post (news page)"
         },
         {
             name: "linkedProjects",
