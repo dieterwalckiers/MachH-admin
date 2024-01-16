@@ -11,7 +11,8 @@ export default {
         {
             name: "body",
             title: "Body",
-            type: "text",
+            type: "array",
+            of: [{ type: "block" }],
         },
     ],
     preview: {

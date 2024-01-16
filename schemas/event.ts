@@ -35,7 +35,8 @@ export default {
         {
             name: "description",
             title: "Description",
-            type: "text",
+            type: "array",
+            of: [{ type: "block" }],
         },
         {
             name: "image",
@@ -67,4 +68,14 @@ export default {
             description: "Id to create a unique event-link (eg. mach-h.be/events/{slug}). You can generate this or manually fill this in.",
         }
     ],
+    orderings: [
+        {
+            title: 'Date',
+            name: 'date',
+            by: [
+                { field: 'date', direction: 'desc' }
+            ]
+        },
+    ]
+
 };
