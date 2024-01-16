@@ -58,6 +58,12 @@ export default {
             type: "string",
             description: "Hex color code (eg. #d3d30a)",
         },
+        {
+            name: "callToActions",
+            title: "Call-to-action's",
+            type: "array",
+            of: [{ type: "callToAction" }],
+        },
         orderRankField({ type: "project" }),
     ],
 };

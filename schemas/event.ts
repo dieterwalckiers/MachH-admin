@@ -44,15 +44,10 @@ export default {
             description: "will be cropped to a square thumbnail on the events page"
         },
         {
-            name: "ctaHref",
-            title: "Call-to-action link",
-            type: "string",
-            description: "Start with http(s) to link to an external site",
-        },
-        {
-            name: "ctaText",
-            title: "Call-to-action text",
-            type: "string",
+            name: "callToActions",
+            title: "Call-to-action's",
+            type: "array",
+            of: [{ type: "callToAction" }],
         },
         {
             name: "linkedProjects",
