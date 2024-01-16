@@ -17,6 +17,12 @@ export default {
             description: "hh:mm",
         },
         {
+            name: "endTime",
+            title: "End time",
+            type: "string",
+            description: "hh:mm",
+        },
+        {
             name: "place",
             title: "Place",
             type: "string",

@@ -47,15 +47,6 @@ export default defineConfig({
             context
           }),
           S.listItem()
-            .title("Site Settings")
-            .id("siteSettings")
-            .icon(createIcon("⚙️"))
-            .child(
-              S.document()
-                .schemaType("siteSettings")
-                .documentId("siteSettings")
-            ),
-          S.listItem()
             .title("About us page")
             .id("about")
             .icon(createIcon("⚙️"))
