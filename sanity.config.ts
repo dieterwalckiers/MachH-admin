@@ -55,6 +55,15 @@ export default defineConfig({
                 .schemaType("about")
                 .documentId("about")
             ),
+          S.listItem()
+            .title("Privacy policy")
+            .id("privacyPolicy")
+            .icon(createIcon("🔒"))
+            .child(
+              S.document()
+                .schemaType("privacyPolicy")
+                .documentId("privacyPolicy")
+            ),
         ])
     },
 
