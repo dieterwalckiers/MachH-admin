@@ -1,20 +1,8 @@
 
-import { orderRankField, orderRankOrdering } from '@sanity/orderable-document-list'
-
 export default {
     name: "post",
     title: "Post",
     type: "document",
-    orderings: [
-        orderRankOrdering,
-        {
-            title: 'Date',
-            name: 'date',
-            by: [
-                { field: 'date', direction: 'desc' }
-            ]
-        },
-    ],
     fields: [
         {
             name: "title",
@@ -63,7 +51,6 @@ export default {
             type: "array",
             of: [{ type: "callToAction" }],
         },
-        orderRankField({ type: "post" }),
     ],
     preview: {
         select: {
@@ -77,4 +64,13 @@ export default {
             };
         },
     },
+    orderings: [
+        {
+            title: 'Date',
+            name: 'date',
+            by: [
+                { field: 'date', direction: 'desc' }
+            ]
+        },
+    ],
 };
