@@ -5,7 +5,16 @@ export default {
     name: "post",
     title: "Post",
     type: "document",
-    orderings: [orderRankOrdering],
+    orderings: [
+        orderRankOrdering,
+        {
+            title: 'Date',
+            name: 'date',
+            by: [
+                { field: 'date', direction: 'desc' }
+            ]
+        },
+    ],
     fields: [
         {
             name: "title",
