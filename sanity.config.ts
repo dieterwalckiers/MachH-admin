@@ -39,13 +39,12 @@ export default defineConfig({
             .child(
               S.documentTypeList("event")
             ),
-          orderableDocumentListDeskItem({
-            type: 'post',
-            title: 'News',
-            icon: createIcon("📰"),
-            S,
-            context
-          }),
+          S.listItem()
+            .title("News")
+            .icon(createIcon("📰"))
+            .child(
+              S.documentTypeList("post")
+            ),
           S.listItem()
             .title("About us page")
             .id("about")
