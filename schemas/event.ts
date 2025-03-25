@@ -72,6 +72,25 @@ export default {
             },
             validation: (Rule: any) => Rule.required(),
             description: "Id to create a unique event-link (eg. mach-h.be/events/{slug}). You can generate this or manually fill this in.",
+        },
+        {
+            name: "subscribable",
+            title: "Subscribable",
+            type: "boolean",
+            description: "If checked, visitors can subscribe to this event",
+        },
+        {
+            name: "subscriptionMaxParticipants",
+            title: "Max participants",
+            type: "number",
+            hidden: ({ document }: any) => !document.subscribable,
+        },
+        {
+            name: "subscriptionIsPaid",
+            title: "Paid event",
+            type: "boolean",
+            description: "If checked, visitors will be asked to pay when subscribing",
+            hidden: ({ document }: any) => !document.subscribable,
         }
     ],
     orderings: [

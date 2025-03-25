@@ -65,6 +65,12 @@ export default {
             type: "array",
             of: [{ type: "callToAction" }],
         },
+        {
+            name: "isFocused",
+            title: "Is a focused project",
+            type: "boolean",
+            description: "If checked, this project will be shown in the focused projects section on top of the home page",
+        },
         orderRankField({ type: "project" }),
     ],
 };

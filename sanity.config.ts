@@ -48,7 +48,7 @@ export default defineConfig({
           S.listItem()
             .title("About us page")
             .id("about")
-            .icon(createIcon("⚙️"))
+            .icon(createIcon("📄"))
             .child(
               S.document()
                 .schemaType("about")
@@ -62,6 +62,15 @@ export default defineConfig({
               S.document()
                 .schemaType("privacyPolicy")
                 .documentId("privacyPolicy")
+            ),
+        S.listItem()
+            .title("Settings")
+            .id("settings")
+            .icon(createIcon("⚙️"))
+            .child(
+              S.document()
+                .schemaType("settings")
+                .documentId("settings")
             ),
         ])
     },
