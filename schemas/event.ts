@@ -90,7 +90,21 @@ export default {
             title: "Paid event",
             type: "boolean",
             description: "If checked, visitors will be asked to pay when subscribing",
+            hidden: true, // ({ document }: any) => !document.subscribable,
+        },
+        {
+            name: "confirmationMailSubject",
+            title: "Confirmation mail subject",
+            type: "string",
             hidden: ({ document }: any) => !document.subscribable,
+            validation: (Rule: any) => Rule.required(),
+        },
+        {
+            name: "confirmationMailBody",
+            title: "Confirmation mail body",
+            type: "text",
+            hidden: ({ document }: any) => !document.subscribable,
+            validation: (Rule: any) => Rule.required(),
         }
     ],
     orderings: [
