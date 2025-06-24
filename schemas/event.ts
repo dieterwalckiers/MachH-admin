@@ -30,6 +30,7 @@ export default {
         {
             name: "price",
             title: "Price",
+            description: "Price (free input)",
             type: "string",
         },
         {
@@ -90,7 +91,14 @@ export default {
             title: "Paid event",
             type: "boolean",
             description: "If checked, visitors will be asked to pay when subscribing",
-            hidden: true, // ({ document }: any) => !document.subscribable,
+            hidden: ({ document }: any) => !document.subscribable,
+        },
+        {
+            name: "subscriptionPrice",
+            title: "Price",
+            type: "number",
+            description: "Price in € (number)",
+            hidden: ({ document }: any) => !document.subscriptionIsPaid,
         },
         {
             name: "confirmationMailSubject",
