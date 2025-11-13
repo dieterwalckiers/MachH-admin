@@ -113,6 +113,13 @@ export default {
             type: "text",
             hidden: ({ document }: any) => !document.subscribable,
             validation: (Rule: any) => Rule.required(),
+        },
+        {
+            name: "remarksCaption",
+            title: "Remarks caption",
+            type: "string",
+            description: "If provided, an \"Opmerkingen\" field is included with this caption.",
+            hidden: ({ document }: any) => !document.subscribable,
         }
     ],
     orderings: [
